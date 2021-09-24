@@ -1,0 +1,26 @@
+.console {
+	display:flex;	
+	justify-content: center;
+	align-items: center;
+}
+
+
+input {
+	width: 600px;
+	height: 40px;
+	border-radius: 10px;
+	color:chocolate;
+	box-sizing: border-box;
+	outline: none;
+	border: 1px bold black;
+	box-shadow: none;
+}
+
+button {
+	box-sizing: border-box;
+	width: 80px;
+	height:40px;
+	border-radius: 10px;
+	margin-left: 10px;
+	outline: none;
+}
