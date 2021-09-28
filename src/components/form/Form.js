@@ -25,7 +25,7 @@ function Form({ inputText, setInputText, todos, setTodos }) {
       <button type="submit" onClick={submitInputTextHandler}>
         Add
       </button>
-      <select>
+      <select className="select">
         <option>All tasks</option>
         <option>completed</option>
         <option>uncompleted</option>

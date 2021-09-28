@@ -1,22 +1,38 @@
 import React from "react";
+import "./TodoElement.css";
 
 function TodoElement({ todos, setTodos }) {
   return (
     <div className="todo">
-      {todos.map((element,index) => {
-        const removeElement = (index) => {
-          setTodos(todos.splice(index + 1, 1));
+      {todos.map((todo) => {
+        const deleteHandler = () => {
+          setTodos(todos.filter((element) => element.id !== todo.id));
+        };
 
+        const completeHanbler = () => {
+          setTodos(
+            todos.map((item) => {
+              if (item.id === todo.id) {
+                return { ...item, completed: !item.completed };
+              }
+              console.log(todos);
+              return item;
+            })
+          );
+        };
 
-        }
-        if (element.text !== '') {
+        if (todo.text !== "") {
           return (
-            <li className="todo-item" key={element.id}>
-              {element.text}
-              <button className="complete-btn">
+            <li
+              className={`todo-item ${todo.completed ? "completed" : ""}`}
+              key={todo.id}
+              todo={todo}
+            >
+              <span>{todo.text}</span>
+              <button className="complete-btn" onClick={completeHanbler}>
                 <i className="fas fa-check"></i>
               </button>
-              <button className="trash-btn" onClick={() => {removeElement(index)}}>
+              <button className="trash-btn" onClick={deleteHandler}>
                 <i className="fas fa-trash"></i>
               </button>
             </li>

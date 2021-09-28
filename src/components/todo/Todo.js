@@ -6,7 +6,7 @@ function ToDo({ todos, setTodos }) {
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        <TodoElement todos={todos} setTodos= {setTodos}  />
+        <TodoElement todos={todos} setTodos= {setTodos} />
       </ul>
     </div>
   );

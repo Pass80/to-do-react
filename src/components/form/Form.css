@@ -1,26 +1,51 @@
-.console {
-	display:flex;	
-	justify-content: center;
-	align-items: center;
+
+
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button ,form select {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: #ff6f47;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ff6f47;
+  color: white;
 }
 
+ 
 
-input {
-	width: 600px;
-	height: 40px;
-	border-radius: 10px;
-	color:chocolate;
-	box-sizing: border-box;
-	outline: none;
-	border: 1px bold black;
-	box-shadow: none;
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
 }
-
-button {
-	box-sizing: border-box;
-	width: 80px;
-	height:40px;
-	border-radius: 10px;
-	margin-left: 10px;
-	outline: none;
+ form select {
+  color: #ff6f47;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 15rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  cursor: pointer;
+  pointer-events: none;
 }
