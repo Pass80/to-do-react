@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 
-function Form({ inputText, setInputText, todos, setTodos }) {
+function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
   const inputTextHandler = (e) => {
     return setInputText(e.target.value);
   };
@@ -14,6 +14,10 @@ function Form({ inputText, setInputText, todos, setTodos }) {
     ]);
     setInputText("");
   };
+
+  const statusHandler = (e) => {
+    setStatus(e.target.value);
+  };
   return (
     <form className="console" onSubmit={submitInputTextHandler}>
       <input
@@ -25,10 +29,10 @@ function Form({ inputText, setInputText, todos, setTodos }) {
       <button type="submit" onClick={submitInputTextHandler}>
         Add
       </button>
-      <select className="select">
-        <option>All tasks</option>
-        <option>completed</option>
-        <option>uncompleted</option>
+      <select className="select" onChange={statusHandler}>
+        <option>all</option>
+        <option>Completed</option>
+        <option>Uncompleted</option>
       </select>
     </form>
   );

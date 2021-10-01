@@ -1,10 +1,10 @@
 import React from "react";
 import "./TodoElement.css";
 
-function TodoElement({ todos, setTodos }) {
+function TodoElement({ todos, setTodos, filteredTodos }) {
   return (
     <div className="todo">
-      {todos.map((todo) => {
+      {filteredTodos.map((todo) => {
         const deleteHandler = () => {
           setTodos(todos.filter((element) => element.id !== todo.id));
         };
