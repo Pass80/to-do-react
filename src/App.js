@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/form/Form";
-import ToDo from "./components/todo/ToDo";
+import ToDo from "./components/todo/Todo";
 
 function App() {
   const [inputText, setInputText] = useState("");
